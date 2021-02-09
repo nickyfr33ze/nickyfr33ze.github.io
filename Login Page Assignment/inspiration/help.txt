@@ -1,0 +1,6 @@
+This is the site which some help on how to make a page using tailwind:
+https://themesberg.com/blog/tailwind-css/tutorial
+
+Some inspiration links are shown below:
+https://paulund.co.uk/creating-a-login-page-with-tailwind-css
+https://tailwindcomponents.com/components/logins
