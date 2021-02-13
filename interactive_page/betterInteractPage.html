@@ -5,7 +5,44 @@
     <meta charset="UTF-8">
     <title>Better Page by NF</title>
 </head>
-<body>
 
+<script>
+    var num1 = 0;
+    var num2 = 0;
+    var sum = 0;
+
+    function setNum1(id){
+        num1 += id;
+    }
+    function setNum2(id){
+        num2 += id;
+    }
+    function getNum1(){
+        return num1;
+    }
+    function getnum2(){
+        return num2;
+    }
+    function getSum(){
+        return sum;
+    }
+    function addition(num1, num2){
+        sum = num1+num2;
+        return "The addition of "+num1+" and "+num2+" equals: "+sum;
+    }
+</script>
+
+<body style="background-color: goldenrod">
+    <div>
+        <h3 class="font-bold underline text-4xl" style="text-align: center">Which numbers would you like to add together?</h3>
+        <h2 class="italic underline" style="text-align: center">Please pick numbers between 0 and 999.</h2>
+    </div>
+    <br>
+    <form>
+        <label for="num1" style="text-align: center">Number 1:</label><br>
+        <label type="number" id="num1" name="number1" min="0" max="999"></label>
+        <input type="number">
+    </form>
 </body>
+
 </html>
