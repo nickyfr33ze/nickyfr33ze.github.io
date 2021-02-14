@@ -1,0 +1,11 @@
+.div-wrapper {
+    position: relative;
+    height: 300px;
+    width: 300px;
+}
+.wrapper {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: flex-end;
+}
