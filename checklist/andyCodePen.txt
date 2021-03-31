@@ -1,0 +1,19 @@
+This is the processors that Andrew used in his codepen:
+CSS : https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css
+JS : https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.1/alpine.js
+
+The following is the code : 
+
+<div x-data="{stuff: [false, false, false]}">
+    <div x-show="!stuff[0]">
+        <input x-model="stuff[0]" type="checkbox">Stuff 1
+    </div>
+    
+    <div x-show="!stuff[1]">
+        <input x-model="stuff[1]" type="checkbox">Stuff 2
+    </div>
+    
+    <div x-show="!stuff[2]">
+        <input x-model="stuff[2]" type="checkbox">Stuff 3
+    </div>
+</div>
