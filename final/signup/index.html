@@ -11,7 +11,9 @@
         }
         </style>
         <script>
-
+            function success(){
+                alert("You have successfully made an account!");
+            }
         </script>
     <body>
         <center>
@@ -41,7 +43,7 @@
               <p class="text-red text-xs italic">Please choose a password.</p>
             </div>
             <div class="flex items-center justify-between">
-              <button class="bg-blue hover:bg-blue-dark border-2 border-blue-200 text-white font-bold py-2 px-4 rounded" type="button">
+              <button class="bg-blue hover:bg-blue-dark border-2 border-blue-200 text-white font-bold py-2 px-4 rounded" type="button" onclick=success()>
                 Sign In
               </button>
               <a class="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker" href="#">
