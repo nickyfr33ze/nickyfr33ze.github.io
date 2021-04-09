@@ -4,12 +4,17 @@
 <html>
     <style>
         body {
-          background-image: url('background.jpg');
+          background-image: url('people.jpg');
           background-repeat: no-repeat;
           background-attachment: fixed;
           background-size: 100% 100%;
         }
         </style>
+        <script>
+            function success(){
+                alert("You have successfully logged in!");
+            }
+        </script>
     <body>
         <center>
         <div class="topnav text-lg">
@@ -20,6 +25,32 @@
             <a class="ml-5 mr-5" href="contactUs">Contact Us</a>
         </div>
         </center>
-        
+        <div class="text-3xl mt-24">
+            Login:
+        </div>
+        <div class="shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+            <div class="mb-4">
+              <label class="block text-grey-darker text-sm font-bold mb-2" for="email">
+            Email
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="text" placeholder="Email">
+            </div>
+            <div class="mb-6">
+              <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+                Password
+              </label>
+              <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************">
+              <p class="text-red text-xs italic">Please choose a password.</p>
+            </div>
+            <div class="flex items-center justify-between">
+              <button class="bg-blue-100 hover:bg-blue-200 border-2 border-blue-200 text-blue-400 hover:text-blue-500 font-bold py-2 px-4 rounded" type="button" onclick=success()>
+                Sign In
+              </button>
+              <a class="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker" href="#">
+                Forgot Password?
+              </a>
+            </div>
+        </div>
+
     </body>
 </html>
