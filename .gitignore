@@ -1,0 +1,38 @@
+# Sensitive files and configurations
+*.env
+*.key
+*.pem
+*.crt
+*.pfx
+
+# Log files
+*.log
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+
+# Backup files
+*.bak
+*.old
+*.swp
+*.tmp
+
+# Compiled code and binaries
+*.class
+*.o
+*.so
+*.dll
+*.exe
+
+# Private keys and credentials
+id_rsa
+id_rsa.pub
+id_dsa
+id_dsa.pub
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
