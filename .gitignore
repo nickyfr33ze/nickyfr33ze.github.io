@@ -36,3 +36,5 @@ id_dsa.pub
 # Miscellaneous
 .DS_Store
 Thumbs.db
+.templates/
+.templates/*
