@@ -51,10 +51,49 @@ nav ul li a {
         
         .gallery-item img {
             max-width: 100%;
-            height: auto;
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item img:hover {
+            transform: scale(1.05);
         }
         
         .caption {
             margin-top: 8px;
             font-style: italic;
+        }
+
+        /* Responsive design for different screen sizes */
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 0 1 calc(50% - 20px);
+            }
+            
+            .gallery-item img {
+                width: 100%;
+                max-width: 300px;
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex: 0 1 100%;
+            }
+            
+            .gallery-item img {
+                width: 100%;
+                max-width: 280px;
+                height: 160px;
+            }
+            
+            .gallery-container {
+                gap: 15px;
+            }
         }
