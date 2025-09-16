@@ -38,3 +38,4 @@ id_dsa.pub
 Thumbs.db
 .templates/
 .templates/*
+.inspiration/*
