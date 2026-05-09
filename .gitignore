@@ -36,6 +36,9 @@ id_dsa.pub
 # Miscellaneous
 .DS_Store
 Thumbs.db
+
+# Local-only drafting templates and private inspiration notes.
+# These are useful while building the site, but should not be published.
 .templates/
 .templates/*
 .inspiration/*

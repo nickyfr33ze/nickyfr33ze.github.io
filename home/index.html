@@ -3,27 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This domain is under construction and will be ready soon.">
-    <title>Nick | Consultant</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Nick Friesen's terminal-style personal site for systems, security, backend development, and homelab projects.">
+    <title>Nick Friesen | Terminal</title>
+    <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/home/">Home</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/gallery/">Gallery</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/contact-me/">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
-    <h1>Welcome!</h1>
-    <div style="text-align: justify;">
-        <p>Name's Nick, this is the spot! I do alot of <b>IT</b> work professionally and in my freetime. What I really enjoy is <b>security research</b>, dare I say that's where my passion lies.</p>
-        <p>I'm not always that nerdy though. I enjoy <b>photography</b>, <b>videography</b>, <b>music</b>, <b>editing</b>, <b>homelabbing</b> (is that even a word?), and a bit of <b>gaming</b>.</p>
-        <p style="text-align: center;">Feel free to check out my <b><a href="/blog/">blog</a></b> for updates, or my <b><a href="/projects/">projects</a></b> to see some of my work.</p>
-    </div>
+    <main class="terminal-shell" aria-label="Terminal-style portfolio">
+        <div class="terminal-topbar">
+            <div class="window-controls" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="terminal-title">nickyfr33ze.github.io -- /home</div>
+        </div>
+
+        <section class="terminal-body">
+            <div class="prompt-line">
+                <span class="prompt">nick@site:~$</span>
+                <span class="command">whoami</span>
+            </div>
+            <div class="output">
+                <p>Name's Nick. I work in IT, build practical backend and automation tools, run homelab experiments, and keep drifting toward security research because apparently quiet hobbies were unavailable.</p>
+                <p>Type <span class="command">help</span> to move around.</p>
+            </div>
+
+            <div class="prompt-line">
+                <span class="prompt">nick@site:~$</span>
+                <span class="command">ls</span>
+            </div>
+            <div class="output">
+                <div class="command-grid">
+                    <a class="command-card" href="#" data-run-command="about"><strong>about</strong><span>Short bio and technical direction.</span></a>
+                    <a class="command-card" href="#" data-run-command="skills"><strong>skills</strong><span>Systems, security, scripting, backend.</span></a>
+                    <a class="command-card" href="#" data-run-command="resume"><strong>resume</strong><span>Broad professional profile.</span></a>
+                    <a class="command-card" href="#" data-run-command="projects"><strong>projects</strong><span>Workbench and project notes.</span></a>
+                    <a class="command-card" href="#" data-run-command="contact"><strong>contact</strong><span>Useful links and email.</span></a>
+                </div>
+            </div>
+
+            <div data-terminal-output></div>
+
+            <label class="input-line" for="terminal-input">
+                <span class="prompt">nick@site:~$</span>
+                <input id="terminal-input" class="terminal-input" data-terminal-input autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="try: help">
+            </label>
+        </section>
+    </main>
+
+    <script src="/assets/terminal.js"></script>
 </body>
 </html>

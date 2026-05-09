@@ -1,0 +1,234 @@
+:root {
+    color-scheme: dark;
+    --bg: #0a0f0d;
+    --panel: #101713;
+    --panel-strong: #151f19;
+    --text: #d7f7df;
+    --muted: #8ea797;
+    --accent: #43ff8f;
+    --accent-soft: rgba(67, 255, 143, 0.18);
+    --warning: #ffd166;
+    --line: rgba(215, 247, 223, 0.16);
+    --shadow: rgba(0, 0, 0, 0.45);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background: var(--bg);
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    background:
+        radial-gradient(circle at top left, rgba(67, 255, 143, 0.08), transparent 28rem),
+        linear-gradient(180deg, #07100c 0%, #0a0f0d 52%, #060806 100%);
+    color: var(--text);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", "Courier New", monospace;
+    line-height: 1.55;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+.terminal-shell {
+    width: min(980px, 100%);
+    min-height: calc(100vh - 48px);
+    margin: 0 auto;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(16, 23, 19, 0.94);
+    box-shadow: 0 24px 70px var(--shadow);
+    overflow: hidden;
+}
+
+.terminal-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 44px;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--line);
+    background: var(--panel-strong);
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+
+.window-controls span {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: var(--muted);
+}
+
+.window-controls span:nth-child(1) {
+    background: #ff5f56;
+}
+
+.window-controls span:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.window-controls span:nth-child(3) {
+    background: #27c93f;
+}
+
+.terminal-title {
+    min-width: 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.terminal-body {
+    padding: 24px;
+}
+
+.prompt-line,
+.input-line {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.prompt {
+    flex: 0 0 auto;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.command {
+    color: var(--warning);
+}
+
+.output {
+    margin: 10px 0 24px;
+    color: var(--text);
+}
+
+.output p {
+    margin: 0 0 12px;
+}
+
+.output ul {
+    margin: 10px 0 0;
+    padding-left: 22px;
+}
+
+.output li {
+    margin: 4px 0;
+}
+
+.command-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.command-card {
+    display: block;
+    min-height: 76px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: rgba(67, 255, 143, 0.045);
+}
+
+.command-card strong {
+    display: block;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+
+.command-card span {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.terminal-input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    caret-color: var(--accent);
+}
+
+.terminal-input::placeholder {
+    color: rgba(142, 167, 151, 0.72);
+}
+
+.section-label {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.gallery-item {
+    margin: 0;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.gallery-item figcaption {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 10px;
+    }
+
+    .terminal-shell {
+        min-height: calc(100vh - 20px);
+        border-radius: 6px;
+    }
+
+    .terminal-body {
+        padding: 18px 14px;
+    }
+
+    .prompt-line,
+    .input-line {
+        gap: 8px;
+    }
+}
