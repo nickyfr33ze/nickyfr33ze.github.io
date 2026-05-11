@@ -34,6 +34,7 @@ const commands = {
                 <li>Security research, blue team foundations, and red team curiosity</li>
                 <li>Homelab operations, monitoring, and self-hosted tooling</li>
                 <li>Backend development and automation</li>
+                <li>Developing custom AI tooling with frontier models</li>
             </ul>
         `
     },
@@ -41,6 +42,7 @@ const commands = {
         description: "Open resume.",
         run: () => `
             <p>Broad, privacy-conscious professional profile: IT, systems, security foundations, automation, and backend work.</p>
+            <p>History in MCP environments, non-profit, corporate, and higher education IT.</p>
             <p><a href="/resume/">Open /resume/</a></p>
         `
     },
@@ -106,7 +108,7 @@ function printCommand(command) {
     const block = document.createElement("div");
     block.innerHTML = `
         <div class="prompt-line">
-            <span class="prompt">nick@site:~$</span>
+            <span class="prompt">user@nickyfr33ze:$</span>
             <span class="command">${escapeHtml(command)}</span>
         </div>
         <div class="output">
